@@ -1,74 +1,38 @@
 import os
-import streamlit as st
-from pymongo import MongoClient
-from transformers import AutoTokenizer, AutoModelForCausalLM
-import torch
-from dotenv import load_dotenv
-import json
-
-# Fix for Streamlit reload issues in cloud
 os.environ["STREAMLIT_WATCHER_TYPE"] = "none"
 
-# Hugging Face cache (helps with model downloads on Streamlit Cloud)
-os.environ['TRANSFORMERS_CACHE'] = '/tmp/hf_cache'
+import streamlit as st
+from pymongo import MongoClient
+import json
+from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
 
-# --- MongoDB Connection ---
+# Hugging Face cache (safe path for Streamlit Cloud / Linux)
+os.environ['TRANSFORMERS_CACHE'] = '/tmp/hf_cache'
+
+# Connect to MongoDB
 try:
     client = MongoClient(os.getenv("MONGO_URI"))
     db = client[os.getenv("MONGO_DBNAME")]
     collection = db[os.getenv("MONGO_COLLECTION")]
 except Exception as e:
     st.error("❌ MongoDB connection failed.")
-    st.code(str(e))
     st.stop()
 
-# --- Load LLM Model Safely ---
-@st.cache_resource
-def load_model():
-    st.info("🔄 Loading language model...")
+# Rule-based MongoDB filter generator (fallback method)
+def generate_fallback_query(user_input, area_of_law):
     try:
-        # Use a tiny model to avoid Streamlit Cloud crashing
-        model_id = "sshleifer/tiny-gpt2"  # Replace with "microsoft/phi-2" locally or on a powerful machine
-
-        tokenizer = AutoTokenizer.from_pretrained(model_id)
-        model = AutoModelForCausalLM.from_pretrained(
-            model_id,
-            torch_dtype=torch.float32,
-        )
-
-        return tokenizer, model
-    except Exception as e:
-        st.error("❌ Model loading failed.")
-        st.code(str(e))
-        return None, None
-
-# --- Generate MongoDB Query from User Input ---
-def generate_query(tokenizer, model, user_input, area_of_law):
-    prompt = f"""
-You are a legal assistant helping to query a MongoDB collection of legal cases.
-
-User input: "{user_input}"
-Area of law: "{area_of_law}"
-
-Based on this, generate a MongoDB filter query in JSON format to retrieve relevant documents. Output ONLY the JSON.
-"""
-    try:
-        inputs = tokenizer(prompt, return_tensors="pt")
-        outputs = model.generate(**inputs, max_new_tokens=256)
-        result = tokenizer.decode(outputs[0], skip_special_tokens=True)
-
-        # Extract JSON from result
-        start = result.find("{")
-        end = result.rfind("}") + 1
-        query_str = result[start:end]
-        query = json.loads(query_str)
+        keywords = user_input.lower().split()
+        filters = [{"$text": {"$search": word}} for word in keywords if len(word) > 3]
+        query = {
+            "$and": filters + [{"area_of_law": {"$regex": area_of_law, "$options": "i"}}]
+        }
         return query
     except Exception as e:
-        st.error("❌ Failed to generate or parse the MongoDB query.")
-        st.code(result if 'result' in locals() else "No output")
+        st.error("❌ Error creating query.")
+        st.code(str(e))
         return None
 
 # --- Streamlit UI ---
@@ -82,12 +46,8 @@ if st.button("🔍 Search"):
     if not user_input or not area:
         st.warning("⚠️ Please provide both a case description and an area of law.")
     else:
-        with st.spinner("🤔 Thinking..."):
-            tokenizer, model = load_model()
-            if not tokenizer or not model:
-                st.stop()
-
-            query = generate_query(tokenizer, model, user_input, area)
+        with st.spinner("🤔 Analyzing..."):
+            query = generate_fallback_query(user_input, area)
 
         if query:
             st.subheader("📄 Generated MongoDB Filter Query")
