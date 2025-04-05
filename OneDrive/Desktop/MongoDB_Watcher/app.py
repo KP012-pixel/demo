@@ -1,84 +1,73 @@
 import os
-os.environ["STREAMLIT_WATCHER_TYPE"] = "none"
-
 import streamlit as st
 from pymongo import MongoClient
-from urllib.parse import quote_plus
-import json
 from dotenv import load_dotenv
+from transformers import pipeline
 
 # Load environment variables
 load_dotenv()
 
-# Hugging Face cache (safe path for Streamlit Cloud / Linux)
-os.environ['TRANSFORMERS_CACHE'] = '/tmp/hf_cache'
+# MongoDB config
+MONGO_USER = os.getenv("MONGO_USER")
+MONGO_PASSWORD = os.getenv("MONGO_PASSWORD")
+MONGO_CLUSTER = os.getenv("MONGO_CLUSTER")
+MONGO_DBNAME = os.getenv("MONGO_DBNAME")
+MONGO_COLLECTION = os.getenv("MONGO_COLLECTION")
 
-# Safely construct the MongoDB URI
-try:
-    username = quote_plus(os.getenv("MONGO_USER"))
-    password = quote_plus(os.getenv("MONGO_PASS"))
-    cluster = os.getenv("MONGO_CLUSTER")
-    dbname = os.getenv("MONGO_DBNAME")
-    collection_name = os.getenv("MONGO_COLLECTION")
+# HuggingFace config
+HF_TOKEN = os.getenv("HF_TOKEN")
 
-    mongo_uri = f"mongodb+srv://{username}:{password}@{cluster}/{dbname}?retryWrites=true&w=majority"
-
-    client = MongoClient(
-        mongo_uri,
-        tls=True,
-        tlsAllowInvalidCertificates=True  # Only use this for testing/Streamlit Cloud
+# Set up HuggingFace LLM pipeline
+@st.cache_resource
+def load_model():
+    return pipeline(
+        "text-generation",
+        model="mistralai/Mistral-7B-Instruct-v0.1",
+        token=HF_TOKEN,
+        device_map="auto",
+        max_new_tokens=512
     )
 
-    db = client[dbname]
-    collection = db[collection_name]
-except Exception as e:
-    st.error("❌ MongoDB connection failed.")
-    st.code(str(e))
-    st.stop()
+generator = load_model()
 
-# Rule-based MongoDB filter generator (fallback method)
-def generate_fallback_query(user_input, area_of_law):
+# MongoDB connection
+@st.cache_resource
+def connect_mongodb():
     try:
-        keywords = user_input.lower().split()
-        filters = [{"$text": {"$search": word}} for word in keywords if len(word) > 3]
-        query = {
-            "$and": filters + [{"area_of_law": {"$regex": area_of_law, "$options": "i"}}]
-        }
-        return query
+        uri = f"mongodb+srv://{MONGO_USER}:{MONGO_PASSWORD}@{MONGO_CLUSTER}/?retryWrites=true&w=majority"
+        client = MongoClient(uri, tls=True, tlsAllowInvalidCertificates=True)
+        db = client[MONGO_DBNAME]
+        collection = db[MONGO_COLLECTION]
+        return collection
     except Exception as e:
-        st.error("❌ Error creating query.")
-        st.code(str(e))
+        st.error(f"❌ MongoDB connection failed: {e}")
         return None
 
-# --- Streamlit UI ---
-st.set_page_config(page_title="Legal Assistant", page_icon="⚖️")
-st.title("🧠 Legal Document Assistant")
+collection = connect_mongodb()
 
-user_input = st.text_area("📝 Describe the case or legal issue:")
-area = st.text_input("⚖️ Area of law (e.g., contract, property, tax):")
+# Streamlit UI
+st.title("⚖️ Legal AI Assistant")
+st.write("Ask questions about legal cases in your database.")
 
-if st.button("🔍 Search"):
-    if not user_input or not area:
-        st.warning("⚠️ Please provide both a case description and an area of law.")
+user_input = st.text_area("Enter your question here:")
+
+if st.button("Ask"):
+    if not user_input:
+        st.warning("Please enter a question.")
+    elif not collection:
+        st.error("Database connection not available.")
     else:
-        with st.spinner("🤔 Analyzing..."):
-            query = generate_fallback_query(user_input, area)
+        # Retrieve context from MongoDB
+        context_docs = list(collection.find().limit(3))  # You can customize filters
+        context_texts = "\n\n".join([doc.get("text", str(doc)) for doc in context_docs])
 
-        if query:
-            st.subheader("📄 Generated MongoDB Filter Query")
-            st.code(json.dumps(query, indent=2))
+        # Generate prompt for the LLM
+        prompt = f"Context:\n{context_texts}\n\nQuestion: {user_input}\nAnswer:"
 
-            try:
-                results = list(collection.find(query).limit(5))
-                st.subheader(f"📂 Top {len(results)} Matching Results")
-                if results:
-                    for i, doc in enumerate(results, 1):
-                        st.markdown(f"### 🧾 Result {i}")
-                        st.json(doc)
-                else:
-                    st.info("No matching documents found.")
-            except Exception as e:
-                st.error("❌ Error querying MongoDB.")
-                st.code(str(e))
-        else:
-            st.error("⚠️ Could not execute the query.")
+        with st.spinner("Analyzing and generating response..."):
+            result = generator(prompt)[0]['generated_text']
+            answer = result.split("Answer:")[-1].strip()
+            st.success("Response:")
+            st.write(answer)
+
+
