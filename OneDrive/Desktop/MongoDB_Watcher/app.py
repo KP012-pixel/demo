@@ -1,8 +1,9 @@
+import os
+os.environ["STREAMLIT_WATCHER_TYPE"] = "none"
 import streamlit as st
 from pymongo import MongoClient
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
-import os
 from dotenv import load_dotenv
 import json
 
