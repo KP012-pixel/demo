@@ -1,5 +1,4 @@
 import os
-os.environ["STREAMLIT_WATCHER_TYPE"] = "none"
 import streamlit as st
 from pymongo import MongoClient
 from transformers import AutoTokenizer, AutoModelForCausalLM
@@ -7,38 +6,46 @@ import torch
 from dotenv import load_dotenv
 import json
 
+# Fix for Streamlit reload issues in cloud
+os.environ["STREAMLIT_WATCHER_TYPE"] = "none"
+
+# Hugging Face cache (helps with model downloads on Streamlit Cloud)
+os.environ['TRANSFORMERS_CACHE'] = '/tmp/hf_cache'
+
 # Load environment variables
 load_dotenv()
 
-# Hugging Face cache (safe path for Streamlit Cloud / Linux)
-os.environ['TRANSFORMERS_CACHE'] = '/tmp/hf_cache'
-
-# Connect to MongoDB
+# --- MongoDB Connection ---
 try:
     client = MongoClient(os.getenv("MONGO_URI"))
     db = client[os.getenv("MONGO_DBNAME")]
     collection = db[os.getenv("MONGO_COLLECTION")]
 except Exception as e:
     st.error("❌ MongoDB connection failed.")
+    st.code(str(e))
     st.stop()
 
-# Lazy-load model
+# --- Load LLM Model Safely ---
 @st.cache_resource
 def load_model():
-    st.info("🔄 Loading LLM model...")
+    st.info("🔄 Loading language model...")
     try:
-        tokenizer = AutoTokenizer.from_pretrained("microsoft/phi-2")
+        # Use a tiny model to avoid Streamlit Cloud crashing
+        model_id = "sshleifer/tiny-gpt2"  # Replace with "microsoft/phi-2" locally or on a powerful machine
+
+        tokenizer = AutoTokenizer.from_pretrained(model_id)
         model = AutoModelForCausalLM.from_pretrained(
-            "microsoft/phi-2",
-            torch_dtype=torch.float32,  # CPU-safe
+            model_id,
+            torch_dtype=torch.float32,
         )
+
         return tokenizer, model
     except Exception as e:
-        st.error("❌ Failed to load model.")
+        st.error("❌ Model loading failed.")
         st.code(str(e))
         return None, None
 
-# Generate MongoDB query from user input
+# --- Generate MongoDB Query from User Input ---
 def generate_query(tokenizer, model, user_input, area_of_law):
     prompt = f"""
 You are a legal assistant helping to query a MongoDB collection of legal cases.
@@ -53,7 +60,7 @@ Based on this, generate a MongoDB filter query in JSON format to retrieve releva
         outputs = model.generate(**inputs, max_new_tokens=256)
         result = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
-        # Extract JSON
+        # Extract JSON from result
         start = result.find("{")
         end = result.rfind("}") + 1
         query_str = result[start:end]
