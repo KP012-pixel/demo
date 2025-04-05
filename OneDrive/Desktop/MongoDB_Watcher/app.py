@@ -35,7 +35,7 @@ st.title("🧠 Legal Case Assistant")
 
 user_input = st.text_area("Enter your legal case description:")
 
-if st.button("Analyze") and user_input and collection:
+if st.button("Analyze") and user_input and collection is not None:
     st.markdown("🔍 Searching for related cases...")
 
     # Find similar documents in MongoDB
