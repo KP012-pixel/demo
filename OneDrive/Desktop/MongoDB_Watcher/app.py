@@ -1,3 +1,4 @@
+import certifi
 import streamlit as st
 from pymongo import MongoClient
 from transformers import pipeline
@@ -15,8 +16,9 @@ def load_model():
 # --- Connect to MongoDB ---
 @st.cache_resource
 def connect_mongo():
+    import certifi  # make sure it's here too
     try:
-        client = MongoClient(MONGO_URI)
+        client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())  # ✅ ADD this param
         db = client[MONGO_DBNAME]
         collection = db[MONGO_COLLECTION]
         st.success("✅ Connected to MongoDB")
