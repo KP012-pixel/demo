@@ -1,0 +1,6 @@
+streamlit
+pymongo
+python-dotenv
+transformers
+torch
+accelerate>=0.26.0
