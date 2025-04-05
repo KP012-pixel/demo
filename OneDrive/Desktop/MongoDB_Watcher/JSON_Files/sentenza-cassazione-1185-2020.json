@@ -1,0 +1,194 @@
+{
+  "nome_pdf": "Sentenza 1185.pdf",
+  "autorità": "Corte Suprema di Cassazione",
+  
+  "sezione": {
+    "valore": "Prima Civile",
+    "confidence_score": 1.0
+  },
+  
+  "identificativo_sentenza": {
+    "numero": "1185",
+    "anno": "2020",
+    "confidence_score": 1.0
+  },
+  
+  "date": {
+    "deposito": {
+      "valore": "2020-01-21",
+      "confidence_score": 1.0
+    },
+    "pubblicazione": {
+      "valore": "2020-01-21",
+      "confidence_score": 0.9
+    },
+    "udienza_pubblica": {
+      "valore": "2019-07-03",
+      "confidence_score": 1.0
+    },
+    "camera_di_consiglio": {
+      "valore": "2019-07-03",
+      "confidence_score": 0.9
+    },
+    "decisione": {
+      "valore": "2019-07-03",
+      "confidence_score": 0.9
+    }
+  },
+  
+  "numero_ruolo_ricorso": {
+    "valore": "21680/2018",
+    "confidence_score": 1.0
+  },
+  
+  "collegio_giudicante": {
+    "presidente": {
+      "nome": "Giacinto",
+      "cognome": "Bisogni"
+    },
+    "relatore": {
+      "nome": "Loredana",
+      "cognome": "Nazzicone"
+    },
+    "componenti": [
+      {
+        "nome": "Francesco",
+        "cognome": "Terrusi"
+      },
+      {
+        "nome": "Irene",
+        "cognome": "Scordamaglia"
+      },
+      {
+        "nome": "Roberto",
+        "cognome": "Amatore"
+      }
+    ]
+  },
+  
+  "temi_generali_trattati": [
+    "Diritto societario",
+    "Società a responsabilità limitata",
+    "Socio moroso",
+    "Aumento di capitale",
+    "Esclusione del socio",
+    "Diritto di controllo"
+  ],
+  
+  "parti_coinvolte": {
+    "ricorrenti": [
+      {
+        "ruolo": "Socio",
+        "tipo": "Persona fisica",
+        "azione": "Ricorso per cassazione"
+      }
+    ],
+    "resistenti": [
+      {
+        "ruolo": "Società",
+        "tipo": "S.r.l.",
+        "azione": "Controricorso e ricorso incidentale"
+      }
+    ]
+  },
+  
+  "fatto": {
+    "primo_grado": {
+      "autorità": "Tribunale di Reggio Emilia",
+      "data_decisione": "2013-12-27",
+      "numero_sentenza": null,
+      "descrizione": [
+        "Il ricorrente aveva proposto domande contro la società per ottenere il risarcimento del danno per il rifiuto frapposto all'esercizio del diritto di ispezione",
+        "Aveva chiesto l'accertamento del diritto di compensare il debito da sottoscrizione dell'aumento di capitale con il credito da finanziamento soci",
+        "Aveva chiesto la condanna della società alla restituzione della somma di Euro 5.000,00 già versata",
+        "In subordine, aveva chiesto l'accertamento del corretto versamento dell'intera somma dovuta per l'aumento",
+        "In ulteriore subordine, aveva chiesto l'accertamento della propria perdurante titolarità nella quota di nominali Euro 4.000,00",
+        "Infine, aveva chiesto l'accertamento dell'illegittimità della propria esclusione"
+      ],
+      "esito": {
+        "domande_accolte": [],
+        "domande_respinte": [
+          "Tutte le domande"
+        ],
+        "vittoria": {
+          "esito": "Rigetto",
+          "rapporto_domande": null
+        }
+      }
+    },
+    "secondo_grado": {
+      "autorità": "Corte d'Appello di Bologna",
+      "data_decisione": "2018-01-31",
+      "numero_sentenza": "299/2018",
+      "descrizione": [
+        "La Corte d'Appello ha ritenuto che l'art. 2466 c.c. sulla vendita in danno non impedisce al socio di s.r.l. di esercitare il diritto di controllo, ma ha respinto la domanda risarcitoria per mancata allegazione del danno",
+        "Ha ritenuto legittimo il rifiuto dell'amministratore di accettare un pagamento tardivo dei decimi",
+        "Ha ritenuto non provata l'esistenza di finanziamenti da parte del socio",
+        "Ha affermato che il credito relativo ai finanziamenti non avrebbe potuto essere utilizzato in compensazione",
+        "Ha ritenuto applicabile l'art. 2466 c.c. anche al debito da sottoscrizione di un aumento di capitale",
+        "Ha ritenuto legittima l'esclusione del socio in toto, pur in presenza di una mora parziale"
+      ],
+      "esito": {
+        "domande_accolte": [],
+        "domande_respinte": [
+          "Tutte le domande"
+        ],
+        "vittoria": {
+          "esito": "Rigetto",
+          "rapporto_domande": null
+        }
+      }
+    }
+  },
+  
+  "argomenti_giuridici_rilevanti": [
+    "Applicabilità dell'art. 2466 c.c. al debito da sottoscrizione di aumento di capitale",
+    "Divisibilità della quota di s.r.l. in caso di esclusione del socio moroso",
+    "Frazionabilità della quota di s.r.l. ai fini della procedura di esclusione",
+    "Limitazione dell'esclusione del socio moroso alla sola quota sottoscritta in aumento di capitale",
+    "Riduzione nominale e reale del capitale sociale in caso di esclusione del socio moroso",
+    "Persistenza del diritto di controllo ex art. 2476 c.c. in capo al socio moroso",
+    "Rapporto tra diritti amministrativi e status di socio moroso",
+    "Compensazione tra credito da finanziamento soci e debito da sottoscrizione"
+  ],
+  
+  "principi_estratti": [
+    {
+      "contesto": "Applicabilità dell'art. 2466 c.c. al debito da sottoscrizione di aumento di capitale",
+      "motivazioni": "La norma mira a preservare l'effettività del capitale sociale e il procedimento ha di mira la tutela della situazione patrimoniale della società, tutela che non ha ragione di essere limitata al momento della costituzione",
+      "principio_giuridico": "L'art. 2466 c.c. si applica anche qualora il debito in capo al socio, rimasto insoddisfatto, derivi dalla sottoscrizione della quota di capitale in aumento a lui spettante",
+      "riferimenti_normativi": "Art. 2466 c.c.",
+      "riferimenti_giurisprudenziali_dottrinali": null,
+      "confidence_score": 1.0
+    },
+    {
+      "contesto": "Esclusione del socio moroso titolare di quota preesistente all'aumento di capitale",
+      "motivazioni": "L'inadempimento del socio all'obbligo di versare quanto sottoscritto riguarda non l'intera quota, posseduta dopo l'aumento e risultante dalla somma di questa con la partecipazione originaria, ma solo la porzione derivante dall'aumento di capitale",
+      "principio_giuridico": "Nel caso di mora del socio nell'esecuzione dei versamenti, dovuti alla società a titolo di conferimento per il debito da sottoscrizione dell'aumento del capitale sociale deliberato dall'assemblea nel corso della vita della società, il socio non può essere escluso, essendo egli titolare della partecipazione sociale sin dalla costituzione della società; pertanto, ferma la permanenza del socio in società per la quota già posseduta, l'assemblea deve deliberare la riduzione del capitale sociale solo per la misura corrispondente al debito di sottoscrizione derivante dall'aumento non onorato, fatto salvo solo il caso in cui lo statuto preveda l'indivisibilità della quota",
+      "riferimenti_normativi": "Art. 2466 c.c., art. 2468 c.c., art. 2473 c.c., art. 2481-bis c.c.",
+      "riferimenti_giurisprudenziali_dottrinali": null,
+      "confidence_score": 1.0
+    },
+    {
+      "contesto": "Diritto di controllo del socio moroso",
+      "motivazioni": "Il socio moroso, fino al completamento del procedimento di vendita coattiva o di esclusione non cessa di essere socio. Mentre il voto resta 'sospeso' per il tempo della morosità, quale misura sanzionatoria e sollecitatoria dell'adempimento, non così i diritti amministrativi ed, in primis, il diritto di informazione e di ispezione",
+      "principio_giuridico": "Il socio moroso di società a responsabilità limitata non è ammesso, secondo il disposto dell'art. 2466 c.c., ad esprimere il proprio voto nelle decisioni e deliberazioni assembleari, ma non perde anche il diritto di controllo sugli affari sociali, ai sensi dell'art. 2476 c.c., comma 2, sino a che egli resti parte della compagine societaria in esito al procedimento intrapreso dagli amministratori",
+      "riferimenti_normativi": "Art. 2466 c.c., art. 2476 c.c.",
+      "riferimenti_giurisprudenziali_dottrinali": null,
+      "confidence_score": 1.0
+    },
+    {
+      "contesto": "Divisibilità della quota di s.r.l.",
+      "motivazioni": "La quota di una società a responsabilità limitata è unica per ciascun socio, non potendo essa essere rappresentata da azioni e non essendo la mera componente di un 'pacchetto' di titoli. Tuttavia, non è vero che la quota non sia divisibile: il contrario desumendosi già dalla lettera della norma, laddove prevede che la quota del socio moroso possa essere venduta 'agli altri soci in proporzione della loro partecipazione'",
+      "principio_giuridico": "La quota di s.r.l. è divisibile, come si desume dalla lettera dell'art. 2466 c.c., comma 2, che prevede la vendita della quota del socio moroso 'agli altri soci in proporzione della loro partecipazione', salvo che lo statuto esplicitamente contempli l'indivisibilità della quota di ciascun socio",
+      "riferimenti_normativi": "Art. 2466 c.c., art. 2468 c.c., art. 2473 c.c.",
+      "riferimenti_giurisprudenziali_dottrinali": null,
+      "confidence_score": 0.9
+    }
+  ],
+  
+  "massima": {
+    "testo": "Nel caso di mora del socio nell'esecuzione dei versamenti, dovuti alla società a titolo di conferimento per il debito da sottoscrizione dell'aumento del capitale sociale deliberato dall'assemblea nel corso della vita della società, il socio non può essere escluso, essendo egli titolare della partecipazione sociale sin dalla costituzione della società; pertanto, ferma la permanenza del socio in società per la quota già posseduta, l'assemblea deve deliberare la riduzione del capitale sociale solo per la misura corrispondente al debito di sottoscrizione derivante dall'aumento non onorato, fatto salvo solo il caso in cui lo statuto preveda l'indivisibilità della quota. Il socio moroso di società a responsabilità limitata non è ammesso, secondo il disposto dell'art. 2466 c.c., ad esprimere il proprio voto nelle decisioni e deliberazioni assembleari, ma non perde anche il diritto di controllo sugli affari sociali, ai sensi dell'art. 2476 c.c., comma 2, sino a che egli resti parte della compagine societaria in esito al procedimento intrapreso dagli amministratori.",
+    "confidence_score": 1.0
+  }
+}

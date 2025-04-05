@@ -1,0 +1,164 @@
+{
+  "nome_pdf": "Trib.-Roma-1-aprile-2019.pdf",
+  "autorità": "Tribunale Ordinario di Roma",
+  
+  "sezione": {
+    "valore": "Sezione XVI Civile in funzione di Sezione Specializzata in Materia di Impresa",
+    "confidence_score": 0.95
+  },
+  
+  "identificativo_sentenza": {
+    "numero": "7305",
+    "anno": "2019",
+    "confidence_score": 0.9
+  },
+  
+  "date": {
+    "deposito": {
+      "valore": "2019-04-01",
+      "confidence_score": 0.9
+    },
+    "pubblicazione": {
+      "valore": "2019-04-01",
+      "confidence_score": 0.9
+    },
+    "udienza_pubblica": {
+      "valore": null,
+      "confidence_score": 0.0
+    },
+    "camera_di_consiglio": {
+      "valore": null,
+      "confidence_score": 0.0
+    },
+    "decisione": {
+      "valore": "2019-03-30",
+      "confidence_score": 0.8
+    }
+  },
+  
+  "numero_ruolo_ricorso": {
+    "valore": "17988/2019",
+    "confidence_score": 0.95
+  },
+  
+  "collegio_giudicante": {
+    "presidente": {
+      "nome": null,
+      "cognome": null
+    },
+    "relatore": {
+      "nome": null,
+      "cognome": null
+    },
+    "componenti": [
+      {
+        "nome": "Cecilia",
+        "cognome": "Bernardo",
+        "ruolo": "Giudice designato"
+      }
+    ]
+  },
+  
+  "temi_generali_trattati": [
+    "Diritto societario",
+    "Diritto di ispezione del socio",
+    "Operazioni di interesse primordiale",
+    "Limiti ai poteri degli amministratori",
+    "Provvedimento cautelare ex art. 700 c.p.c."
+  ],
+  
+  "parti_coinvolte": {
+    "ricorrenti": [
+      {
+        "ruolo": "Ricorrente",
+        "tipo": "Persona fisica",
+        "azione": "Socio della Torlonia Partecipazioni S.p.A."
+      }
+    ],
+    "resistenti": [
+      {
+        "ruolo": "Resistente",
+        "tipo": "Persona giuridica",
+        "azione": "Società per azioni"
+      }
+    ]
+  },
+  
+  "fatto": {
+    "primo_grado": {
+      "autorità": "Tribunale Ordinario di Roma",
+      "data_decisione": "2019-04-01",
+      "numero_sentenza": "7305/2019",
+      "descrizione": [
+        "Carlo Torlonia, socio titolare del 24,5% del capitale sociale della Torlonia Partecipazioni S.p.A., ha richiesto in via d'urgenza ex art. 700 c.p.c. di poter visionare un Accordo Quadro relativo all'operazione integrativa tra Igea Banca S.p.A. e Banca del Fucino S.p.A.",
+        "L'Accordo Quadro prevedeva l'ingresso di Banca Igea nella Banca del Fucino (principale asset di Torlonia Partecipazioni), con conseguente perdita del controllo da parte di Torlonia Partecipazioni e assunzione di importanti impegni finanziari",
+        "Al ricorrente era stato negato l'accesso al documento prima dell'assemblea del 4.12.2018 che aveva autorizzato la sottoscrizione dell'accordo"
+      ],
+      "esito": {
+        "domande_accolte": [
+          "Ordine alla società di consentire l'esame diretto dell'Accordo Quadro al socio Carlo Torlonia"
+        ],
+        "domande_respinte": [],
+        "vittoria": {
+          "esito": "Accoglimento totale",
+          "rapporto_domande": "1/1"
+        }
+      }
+    },
+    "secondo_grado": {
+      "autorità": null,
+      "data_decisione": null,
+      "numero_sentenza": null,
+      "descrizione": [],
+      "esito": {
+        "domande_accolte": [],
+        "domande_respinte": [],
+        "vittoria": {
+          "esito": null,
+          "rapporto_domande": null
+        }
+      }
+    }
+  },
+  
+  "argomenti_giuridici_rilevanti": [
+    "Limiti del diritto di ispezione del socio nelle società per azioni (art. 2422 c.c.)",
+    "Competenze implicite dell'assemblea delle società per azioni",
+    "Distinzione tra poteri di gestione dell'impresa e poteri di organizzazione dell'attività d'impresa",
+    "Operazioni che incidono sui 'diritti primordiali' dei soci",
+    "Obbligo di informazione per decisioni di interesse primordiale dei soci",
+    "Clausole statutarie che limitano i poteri degli amministratori e loro validità rispetto all'art. 2380 bis c.c."
+  ],
+  
+  "principi_estratti": [
+    {
+      "contesto": "Limitazioni al diritto di ispezione del socio nelle società per azioni",
+      "motivazioni": "La limitazione prevista dall'art. 2422 c.c. non è opponibile all'azionista nei casi in cui il documento attenga ad operazioni che incidano così profondamente sulla struttura ed organizzazione dell'impresa, tali da esulare dalla competenza gestoria esclusiva dell'organo amministrativo.",
+      "principio_giuridico": "L'art. 2422 c.c. non viene in rilievo in tutti quei casi in cui una determinata decisione deve ritenersi necessariamente rimessa alla competenza dei soci in quanto, di per sé, incidente sui cd. 'diritti primordiali' di costoro.",
+      "riferimenti_normativi": "Art. 2422 c.c., Art. 2421 c.c., Art. 2380 bis c.c., Art. 2476 c.c., Art. 2479 c.c., Art. 2361 c.c., Art. 2204 c.c.",
+      "riferimenti_giurisprudenziali_dottrinali": "Autorevole dottrina sulle decisioni che incidono su interessi primordiali dei soci",
+      "confidence_score": 0.9
+    },
+    {
+      "contesto": "Competenze implicite dell'assemblea nelle società per azioni",
+      "motivazioni": "Esistono operazioni (cd. 'operazioni di interesse primordiale') che, incidendo profondamente sulla struttura e sulla organizzazione dell'impresa, vanno sostanzialmente ad incidere sulle condizioni del rischio inizialmente accettato dai soci. Tali decisioni vanno riservate esclusivamente a coloro che tale rischio corrono.",
+      "principio_giuridico": "Le c.d. 'operazioni di interesse primordiale' esorbitano dai poteri di gestione degli amministratori e rientrano nella competenza implicita dell'assemblea e ciò rappresenta un principio generale del diritto societario, valido a prescindere dal tipo di società prescelto.",
+      "riferimenti_normativi": "Art. 2380 bis c.c., Art. 2361 c.c., Art. 2479 c.c.",
+      "riferimenti_giurisprudenziali_dottrinali": null,
+      "confidence_score": 0.85
+    },
+    {
+      "contesto": "Diritto all'informazione dei soci su operazioni primordiali",
+      "motivazioni": "Se l'operazione esorbita dai poteri gestori dell'amministratore e rientra nella competenza dell'assemblea, i soci hanno il diritto ad essere pienamente informati di tutti gli aspetti della operazione e deve essere fornita loro tutta la documentazione necessaria per poter esprimere in maniera consapevole il loro voto.",
+      "principio_giuridico": "Quanto alla necessaria competenza dei soci a decidere su questioni incidenti sui loro 'diritti primordiali', se trasposto sul versante della 'informazione' dovuta ai soci medesimi, implica necessariamente l'inoperatività delle limitazioni che l'art. 2422 c.c. pone all'accesso alla documentazione sociale da parte degli azionisti.",
+      "riferimenti_normativi": "Art. 2422 c.c.",
+      "riferimenti_giurisprudenziali_dottrinali": null,
+      "confidence_score": 0.9
+    }
+  ],
+  
+  "massima": {
+    "testo": "Nelle società per azioni, sebbene il diritto di ispezione riconosciuto al socio sia limitato ai soli libri sociali indicati nell'art. 2421 c.c., tale limitazione non è opponibile all'azionista nei casi in cui il documento richiesto attenga ad operazioni che incidano profondamente sulla struttura ed organizzazione dell'impresa, tali da esulare dalla competenza gestoria esclusiva dell'organo amministrativo e da incidere sui 'diritti primordiali' dei soci. In tali casi, sussiste il diritto del socio a visionare la relativa documentazione, essendo abusivo e contrario ai principi di correttezza e buona fede il rifiuto opposto dalla società.",
+    "confidence_score": 0.85
+  }
+}

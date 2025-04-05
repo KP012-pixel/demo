@@ -1,0 +1,185 @@
+{
+  "nome_pdf": "77777777777.pdf",
+  "autorità": "Corte Suprema di Cassazione",
+  
+  "sezione": {
+    "valore": "Terza Civile",
+    "confidence_score": 1.0
+  },
+  
+  "identificativo_sentenza": {
+    "numero": "41798",
+    "anno": "2021",
+    "confidence_score": 1.0
+  },
+  
+  "date": {
+    "deposito": {
+      "valore": "2021-12-28",
+      "confidence_score": 1.0
+    },
+    "pubblicazione": {
+      "valore": "2021-12-28",
+      "confidence_score": 1.0
+    },
+    "udienza_pubblica": {
+      "valore": "2021-11-04",
+      "confidence_score": 1.0
+    },
+    "camera_di_consiglio": {
+      "valore": null,
+      "confidence_score": 0.0
+    },
+    "decisione": {
+      "valore": "2021-11-04",
+      "confidence_score": 1.0
+    }
+  },
+  
+  "numero_ruolo_ricorso": {
+    "valore": "24035/2019",
+    "confidence_score": 1.0
+  },
+  
+  "collegio_giudicante": {
+    "presidente": {
+      "nome": "Franco",
+      "cognome": "DE STEFANO"
+    },
+    "relatore": {
+      "nome": "Augusto",
+      "cognome": "TATANGELO"
+    },
+    "componenti": [
+      {
+        "nome": "Cristiano",
+        "cognome": "VALLE"
+      },
+      {
+        "nome": "Marco",
+        "cognome": "ROSSETTI"
+      },
+      {
+        "nome": "Paolo",
+        "cognome": "PORRECA"
+      }
+    ]
+  },
+  
+  "temi_generali_trattati": [
+    "Opposizione all'esecuzione",
+    "Custode giudiziario",
+    "Liquidazione compensi",
+    "Titolo esecutivo",
+    "Decorrenza interessi"
+  ],
+  
+  "parti_coinvolte": {
+    "ricorrenti": [
+      {
+        "ruolo": "Ricorrente",
+        "tipo": "Persona giuridica",
+        "azione": "Propone ricorso per cassazione"
+      }
+    ],
+    "resistenti": [
+      {
+        "ruolo": "Controricorrente",
+        "tipo": "Persona giuridica",
+        "azione": "Si oppone al ricorso"
+      }
+    ]
+  },
+  
+  "fatto": {
+    "primo_grado": {
+      "autorità": "Giudice di Pace di Gorizia",
+      "data_decisione": null,
+      "numero_sentenza": null,
+      "descrizione": [
+        "Coveg S.r.l., società nominata custode giudiziario nell'ambito di un giudizio di divisione endo-esecutiva, ha intimato a Mainardi Food S.r.l. precetto di pagamento dell'importo di € 4.467,26, sulla base di un decreto di liquidazione dei compensi",
+        "Mainardi Food S.r.l. ha proposto opposizione all'esecuzione, ai sensi dell'art. 615 c.p.c.",
+        "L'opposizione è stata rigettata dal Giudice di Pace di Gorizia"
+      ],
+      "esito": {
+        "domande_accolte": [],
+        "domande_respinte": [
+          "Opposizione all'esecuzione"
+        ],
+        "vittoria": {
+          "esito": "Rigetto",
+          "rapporto_domande": null
+        }
+      }
+    },
+    "secondo_grado": {
+      "autorità": "Tribunale di Gorizia",
+      "data_decisione": "2019-03-21",
+      "numero_sentenza": "85/2019",
+      "descrizione": [
+        "Il Tribunale di Gorizia, in parziale riforma della decisione di primo grado, ha dichiarato la nullità parziale del precetto opposto, limitatamente alla somma eccedente l'importo di € 3.648,91",
+        "Ha condannato la Coveg S.r.l. a restituire l'eccedenza percepita"
+      ],
+      "esito": {
+        "domande_accolte": [
+          "Riduzione dell'importo precettato"
+        ],
+        "domande_respinte": [
+          "Opposizione all'esecuzione per totale invalidità del precetto"
+        ],
+        "vittoria": {
+          "esito": "Parziale accoglimento",
+          "rapporto_domande": null
+        }
+      }
+    }
+  },
+  
+  "argomenti_giuridici_rilevanti": [
+    "Efficacia esecutiva del decreto di liquidazione del compenso al custode giudiziario",
+    "Validità del decreto di liquidazione del custode giudiziario rinvenuto tardivamente in cancelleria",
+    "Decorrenza degli interessi sulle somme liquidate al custode giudiziario",
+    "Rapporto tra provvedimento di liquidazione del compenso all'ausiliario e sentenza definitiva del giudizio",
+    "Limiti dell'opposizione all'esecuzione rispetto al contenuto del titolo esecutivo giudiziale"
+  ],
+  
+  "principi_estratti": [
+    {
+      "contesto": "Validità del decreto di liquidazione del custode giudiziario",
+      "motivazioni": "Il decreto di liquidazione del compenso al custode giudiziario, emesso dal giudice prima della sentenza che ha definito il giudizio ma pubblicato successivamente, non è giuridicamente inesistente. La data di pubblicazione può essere considerata quella in cui il provvedimento è stato rinvenuto in cancelleria, anche se tardivamente.",
+      "principio_giuridico": "Il decreto di liquidazione del compenso al custode giudiziario, anche se pubblicato dopo la definizione del giudizio, conserva la sua efficacia e validità giuridica.",
+      "riferimenti_normativi": "Artt. 133, 134, 135, 57, 152 c.p.c., 45 disp. att. c.p.c., 168 D.P.R. n. 115/2002",
+      "riferimenti_giurisprudenziali_dottrinali": "Cass., Sez. U, Sentenza n. 19889 del 23/07/2019, Rv. 654839 - 01",
+      "confidence_score": 0.9
+    },
+    {
+      "contesto": "Decorrenza degli interessi sulle somme liquidate al custode giudiziario",
+      "motivazioni": "Gli interessi sugli importi liquidati dal giudice a titolo di compenso in favore degli ausiliari non possono decorrere da data anteriore a quella della liquidazione, coincidente con la venuta a giuridica esistenza del decreto, cioè con la sua pubblicazione.",
+      "principio_giuridico": "Gli interessi sui compensi liquidati agli ausiliari del giudice decorrono dalla data di pubblicazione del decreto di liquidazione e non da quella dell'istanza di liquidazione.",
+      "riferimenti_normativi": "Artt. 1282 e 1224 c.c.",
+      "riferimenti_giurisprudenziali_dottrinali": "Cass., Sez. 2, Ordinanza n. 17655 del 05/07/2018, Rv. 649453 - 01; Sez. 2, Sentenza n. 2954 del 16/02/2016, Rv. 638856 - 01; Sez. 2, Sentenza n. 2431 del 02/02/2011, Rv. 616494 - 01; Sez. L, Sentenza n. 11777 del 07/06/2005, Rv. 581898 - 01; Sez. 2, Sentenza n. 5240 del 29/05/1999, Rv. 526834 - 01",
+      "confidence_score": 1.0
+    },
+    {
+      "contesto": "Rapporto tra provvedimento di liquidazione del compenso all'ausiliario e sentenza definitiva del giudizio",
+      "motivazioni": "I decreti con cui vengono liquidati i compensi in favore degli ausiliari del giudice non restano implicitamente assorbiti dalla regolamentazione delle spese di lite operata con la pronuncia che definisce il giudizio stesso ai sensi dell'art. 91 c.p.c., in quanto quest'ultima attiene al diverso rapporto tra parte vittoriosa e soccombente.",
+      "principio_giuridico": "I decreti di liquidazione dei compensi agli ausiliari del giudice conservano efficacia esecutiva indipendentemente dalla sentenza definitiva del giudizio, salvo che non siano espressamente modificati nella sentenza stessa.",
+      "riferimenti_normativi": "Art. 91 c.p.c.",
+      "riferimenti_giurisprudenziali_dottrinali": "Cass., Sez. 6 - 3, Ordinanza n. 23522 del 05/11/2014, Rv. 633222 - 01; Sez. 2, Sentenza n. 25047 del 10/10/2018, Rv. 650671 - 01",
+      "confidence_score": 0.9
+    },
+    {
+      "contesto": "Limiti dell'opposizione all'esecuzione rispetto al contenuto del titolo esecutivo giudiziale",
+      "motivazioni": "In sede di opposizione all'esecuzione non possono essere proposte questioni attinenti alla validità ed al merito del provvedimento che costituisce titolo esecutivo, che siano o siano state proponibili in sede di impugnazione avverso quest'ultimo.",
+      "principio_giuridico": "Le contestazioni relative al contenuto del provvedimento giudiziale costituente titolo esecutivo devono essere fatte valere con l'impugnazione del provvedimento stesso e non con l'opposizione all'esecuzione.",
+      "riferimenti_normativi": "Art. 615 c.p.c.",
+      "riferimenti_giurisprudenziali_dottrinali": "Cass., Sez. U, Sentenza n. 19889 del 23/07/2019, Rv. 654839 - 01",
+      "confidence_score": 0.9
+    }
+  ],
+  
+  "massima": {
+    "testo": "Gli interessi sugli importi liquidati dal giudice a titolo di compenso in favore degli ausiliari non possono decorrere da data anteriore a quella della liquidazione, coincidente con la venuta a giuridica esistenza del decreto, cioè con la sua pubblicazione. I decreti con cui vengono liquidati i compensi in favore degli ausiliari del giudice non restano implicitamente assorbiti dalla regolamentazione delle spese di lite operata con la pronuncia che definisce il giudizio stesso ai sensi dell'art. 91 c.p.c., in quanto quest'ultima attiene al diverso rapporto tra parte vittoriosa e soccombente. Tale principio vale anche nel giudizio di divisione endoesecutiva, in cui l'ausiliario presta la sua opera nell'interesse di tutte le parti e può rivolgersi alle stesse per ottenere il pagamento delle sue competenze sulla base del provvedimento di liquidazione, fermo restando che la definitiva attribuzione del carico delle spese processuali resta regolata dalla sentenza.",
+    "confidence_score": 0.9
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "nome_pdf": "Ordinanza-Cassazione-4849-del-16.02.2023",
+  "autorità": "Corte Suprema di Cassazione",
+  
+  "sezione": {
+    "valore": "Prima Civile",
+    "confidence_score": 1.0
+  },
+  
+  "identificativo_sentenza": {
+    "numero": "4849",
+    "anno": "2023",
+    "confidence_score": 1.0
+  },
+  
+  "date": {
+    "deposito": {
+      "valore": "2023-02-16",
+      "confidence_score": 1.0
+    },
+    "pubblicazione": {
+      "valore": null,
+      "confidence_score": 0.0
+    },
+    "udienza_pubblica": {
+      "valore": null,
+      "confidence_score": 0.0
+    },
+    "camera_di_consiglio": {
+      "valore": "2023-02-02",
+      "confidence_score": 1.0
+    },
+    "decisione": {
+      "valore": "2023-02-02",
+      "confidence_score": 1.0
+    }
+  },
+  
+  "numero_ruolo_ricorso": {
+    "valore": "19170/2016",
+    "confidence_score": 1.0
+  },
+  
+  "collegio_giudicante": {
+    "presidente": {
+      "nome": "Loredana",
+      "cognome": "NAZZICONE"
+    },
+    "relatore": {
+      "nome": "Maura",
+      "cognome": "CAPRIOLI"
+    },
+    "componenti": [
+      {
+        "nome": "Angelina Maria",
+        "cognome": "PERRINO"
+      },
+      {
+        "nome": "Giuseppe",
+        "cognome": "DONGIACOMO"
+      },
+      {
+        "nome": "Daniela",
+        "cognome": "VALENTINO"
+      }
+    ]
+  },
+  
+  "temi_generali_trattati": [
+    "Possesso - Reintegrazione o spoglio (azione di)",
+    "Sentenza, ordinanza e decreto in materia civile",
+    "Prova testimoniale civile",
+    "Responsabilità degli amministratori",
+    "Conflitto di interessi nel rapporto di rappresentanza",
+    "Nullità dei contratti",
+    "Requisiti del contratto e causa"
+  ],
+  
+  "parti_coinvolte": {
+    "ricorrenti": [
+      {
+        "ruolo": "Ricorrente",
+        "tipo": "Persona giuridica",
+        "azione": "Propone ricorso per cassazione"
+      }
+    ],
+    "resistenti": [
+      {
+        "ruolo": "Controricorrente",
+        "tipo": "Persona giuridica",
+        "azione": "Resiste con controricorso"
+      },
+      {
+        "ruolo": "Controricorrente",
+        "tipo": "Persona fisica",
+        "azione": "Resiste con controricorso"
+      },
+      {
+        "ruolo": "Controricorrente",
+        "tipo": "Persona fisica",
+        "azione": "Resiste con controricorso"
+      },
+      {
+        "ruolo": "Controricorrente",
+        "tipo": "Persona fisica",
+        "azione": "Resiste con controricorso"
+      },
+      {
+        "ruolo": "Controricorrente",
+        "tipo": "Persona fisica",
+        "azione": "Resiste con controricorso"
+      },
+      {
+        "ruolo": "Controricorrente",
+        "tipo": "Persona fisica",
+        "azione": "Resiste con controricorso"
+      },
+      {
+        "ruolo": "Controricorrente",
+        "tipo": "Persona giuridica",
+        "azione": "Resiste con controricorso"
+      },
+      {
+        "ruolo": "Controricorrente",
+        "tipo": "Persona giuridica",
+        "azione": "Resiste con controricorso"
+      },
+      {
+        "ruolo": "Intimato",
+        "tipo": "Persona giuridica",
+        "azione": "Non si costituisce"
+      },
+      {
+        "ruolo": "Intimato",
+        "tipo": "Persona giuridica",
+        "azione": "Non si costituisce"
+      },
+      {
+        "ruolo": "Intimato",
+        "tipo": "Persona fisica",
+        "azione": "Non si costituisce"
+      },
+      {
+        "ruolo": "Intimato",
+        "tipo": "Persona fisica",
+        "azione": "Non si costituisce"
+      },
+      {
+        "ruolo": "Intimato",
+        "tipo": "Persona fisica",
+        "azione": "Non si costituisce"
+      }
+    ]
+  },
+  
+  "fatto": {
+    "primo_grado": {
+      "autorità": "Tribunale di Roma",
+      "data_decisione": null,
+      "numero_sentenza": "7992-2006",
+      "descrizione": [
+        "La società (Omissis) Srl, già Spa, società editoriale del quotidiano '(Omissis)', promuoveva avanti il Tribunale di Roma cinque diversi giudizi inerenti quattro operazioni societarie, connesse alla vendita della partecipazione sociale, avvenuta il (Omissis) da parte del socio unico Poligrafo Editoriale Spa, facente parte del gruppo editoriale AA, alle società Ical Sud Spa, Porto Torre Spa e Arquata Cementi Srl, facenti capo al Gruppo E.E., per il prezzo di L. 81 miliardi",
+        "Le operazioni oggetto di contestazione erano: la c.d. transazione (Omissis), il mutuo erogato alla società Roma Eterna, l'operazione di cessione del contratto di stampa e la risoluzione anticipata del contratto di concessione pubblicitaria"
+      ],
+      "esito": {
+        "domande_accolte": [],
+        "domande_respinte": [
+          "Azione di responsabilità contrattuale nei confronti di ex amministratori e sindaci",
+          "Azione di responsabilità extracontrattuale"
+        ],
+        "vittoria": {
+          "esito": "Soccombenza dell'attore",
+          "rapporto_domande": null
+        }
+      }
+    },
+    "secondo_grado": {
+      "autorità": "Corte d'Appello di Roma",
+      "data_decisione": "2015-08-28",
+      "numero_sentenza": "4840-2015",
+      "descrizione": [
+        "La società (Omissis) Srl impugnava la decisione del primo giudice avanti alla Corte di appello di Roma, chiedendone la riforma",
+        "Si costituivano A.A., B.B., C.C. con difesa unitaria, nonché E.E., l'avv. D.D., Poligrafici Editoriale Spa, Speed Società Pubblicità Editoriale e Digitale Spa, Finanziaria Italia Spa, Intesa San Paolo Spa, già (Omissis) Spa, proponendo appello incidentale",
+        "La Corte d'Appello respingeva l'appello principale e accoglieva l'appello incidentale di Intesa San Paolo Spa, condannando l'appellante al pagamento delle spese processuali"
+      ],
+      "esito": {
+        "domande_accolte": [],
+        "domande_respinte": [
+          "Tutte le domande dell'appellante principale",
+          "L'appello incidentale di E.E."
+        ],
+        "vittoria": {
+          "esito": "Soccombenza dell'appellante principale",
+          "rapporto_domande": null
+        }
+      }
+    }
+  },
+  
+  "argomenti_giuridici_rilevanti": [
+    "Principio del contraddittorio e partecipazione delle parti al processo",
+    "Responsabilità degli amministratori e sindaci di società per azioni",
+    "Violazione dei doveri di gestione e obbligo di diligenza",
+    "Conflitto di interessi nel rapporto di rappresentanza",
+    "Sindacato giudiziario sulle scelte di gestione degli amministratori",
+    "Nullità dei contratti per mancanza o illiceità della causa",
+    "Collegamento negoziale tra operazioni societarie",
+    "Valutazione della prova e principio di libera valutazione",
+    "Diritto di difesa e autosufficienza del ricorso"
+  ],
+  
+  "principi_estratti": [
+    {
+      "contesto": "Litisconsorzio necessario e accertamento incidentale",
+      "motivazioni": "La Corte di appello ha ritenuto che non fosse stata posta in discussione la validità del contratto rispetto alla controparte contrattuale, ma unicamente la mancata convenienza dell'accordo transattivo quale profilo sintomatico della responsabilità contrattuale ed extracontrattuale degli ex amministratori e sindaci",
+      "principio_giuridico": "Non vi è litisconsorzio necessario allorché il giudice proceda, in via meramente incidentale, ad accertare una situazione giuridica che riguardi anche un terzo, dal momento che gli effetti di tale accertamento non si estendono a quest'ultimo, il quale non subisce alcun pregiudizio, stante l'inidoneità dell'accertamento incidentale a costituire giudicato nei suoi confronti",
+      "riferimenti_normativi": "Art. 101 c.p.c.",
+      "riferimenti_giurisprudenziali_dottrinali": "Cass. 21 gennaio 1992 n. 675; Cass. n. 5439 del 2006",
+      "confidence_score": 0.9
+    },
+    {
+      "contesto": "Responsabilità degli amministratori e sindacato giudiziario sulle scelte di gestione",
+      "motivazioni": "Il giudice del merito ha escluso la responsabilità degli amministratori non ritenendo configurabile un danno derivante dalle operazioni contestate, e ha rilevato che la scelta di transigere alle condizioni convenute rientrava nella discrezionalità dell'organo gestorio",
+      "principio_giuridico": "All'amministratore di una società non può essere imputato a titolo di responsabilità ex art. 2392 c.c. di aver compiuto scelte inopportune dal punto di vista economico, atteso che tale valutazione attiene alla discrezionalità imprenditoriale e può eventualmente rilevare come giusta causa di revoca dell'amministratore, non come fonte di responsabilità contrattuale nei confronti della società. Il giudizio sulla diligenza dell'amministratore nell'adempimento del proprio mandato non può mai investire le scelte di gestione o le modalità e circostanze di tali scelte, anche se presentino profili di rilevante alea economica",
+      "riferimenti_normativi": "Artt. 2392 e 2393 c.c.",
+      "riferimenti_giurisprudenziali_dottrinali": "Cass. n. 17441 del 2016; Cass. n. 2975 del 2020",
+      "confidence_score": 1.0
+    },
+    {
+      "contesto": "Onere probatorio nelle azioni di responsabilità degli amministratori",
+      "motivazioni": "La Corte ha rilevato che la natura contrattuale della responsabilità degli amministratori verso la società comporta che quest'ultima ha l'onere di dimostrare la sussistenza delle violazioni ed il nesso di causalità fra queste ed il danno verificatosi",
+      "principio_giuridico": "In tema di azione di responsabilità degli amministratori, il pregiudizio rappresenta un elemento costitutivo dell'azione e, in assenza di un pregiudizio, non vi può essere una condanna risarcitoria nei confronti degli amministratori convenuti",
+      "riferimenti_normativi": "Artt. 2392 e 2393 c.c.",
+      "riferimenti_giurisprudenziali_dottrinali": null,
+      "confidence_score": 0.9
+    },
+    {
+      "contesto": "Autosufficienza del ricorso per cassazione",
+      "motivazioni": "La Corte ha rilevato che la ricorrente ha contestato la validità delle operazioni compiute dagli amministratori senza riprodurne gli aspetti salienti in violazione dell'art. 366 c.p.c.",
+      "principio_giuridico": "In tema di ricorso per cassazione, l'onere di specificità dei motivi, sancito dall'art. 366, comma 1, n. 4, c.p.c. impone al ricorrente che denunci il vizio di cui all'art. 360 c.p.c., comma 1, n. 3, a pena d'inammissibilità della censura, di indicare le norme di legge di cui intende lamentare la violazione, di esaminarne il contenuto precettivo e di raffrontarlo con le affermazioni in diritto contenute nella sentenza impugnata",
+      "riferimenti_normativi": "Art. 366, comma 1, n. 4, c.p.c.; Art. 360, comma 1, n. 3, c.p.c.",
+      "riferimenti_giurisprudenziali_dottrinali": "Cass., Sez. U., 28 ottobre 2020, n. 23749; Cass., 4 aprile 2017, n. 8758",
+      "confidence_score": 1.0
+    },
+    {
+      "contesto": "Principio di libera valutazione delle prove",
+      "motivazioni": "La Corte ha ritenuto che la Corte d'Appello avesse correttamente valutato le prove disponibili, inclusa la relazione peritale del Dott. M.M.",
+      "principio_giuridico": "In attuazione del principio della libera valutazione delle prove ex art. 116 c.p.c., il giudice di merito è libero di attingere il proprio convincimento da quelle prove o risultanze di prova che ritenga più attendibili e idonee alla formazione dello stesso, né gli è richiesto di dar conto, nella motivazione, dell'esame di tutte le allegazioni e prospettazioni delle parti e di tutte le prove acquisite al processo",
+      "riferimenti_normativi": "Art. 116 c.p.c.",
+      "riferimenti_giurisprudenziali_dottrinali": "Cass. n. 29730 del 29/12/2020; Cass. n. 3601 del 20/02/2006",
+      "confidence_score": 0.9
+    },
+    {
+      "contesto": "Vizio di omesso esame di fatto decisivo",
+      "motivazioni": "La Corte ha ritenuto che la Corte d'Appello avesse esaminato i fatti decisivi della causa, inclusa la relazione M.M. e la sentenza penale nr."
+    }
+  ]
+}
+
+
