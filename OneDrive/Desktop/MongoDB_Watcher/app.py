@@ -14,7 +14,12 @@ os.environ['TRANSFORMERS_CACHE'] = '/tmp/hf_cache'
 
 # Connect to MongoDB
 try:
-    client = MongoClient(os.getenv("MONGO_URI"))
+    client = MongoClient(
+    os.getenv("MONGO_URI"),
+    tls=True,
+    tlsAllowInvalidCertificates=True  # Only use this for testing/Streamlit Cloud
+    )
+
     db = client[os.getenv("MONGO_DBNAME")]
     collection = db[os.getenv("MONGO_COLLECTION")]
 except Exception as e:
