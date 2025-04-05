@@ -3,6 +3,7 @@ os.environ["STREAMLIT_WATCHER_TYPE"] = "none"
 
 import streamlit as st
 from pymongo import MongoClient
+from urllib.parse import quote_plus
 import json
 from dotenv import load_dotenv
 
@@ -12,18 +13,27 @@ load_dotenv()
 # Hugging Face cache (safe path for Streamlit Cloud / Linux)
 os.environ['TRANSFORMERS_CACHE'] = '/tmp/hf_cache'
 
-# Connect to MongoDB
+# Safely construct the MongoDB URI
 try:
+    username = quote_plus(os.getenv("MONGO_USER"))
+    password = quote_plus(os.getenv("MONGO_PASS"))
+    cluster = os.getenv("MONGO_CLUSTER")
+    dbname = os.getenv("MONGO_DBNAME")
+    collection_name = os.getenv("MONGO_COLLECTION")
+
+    mongo_uri = f"mongodb+srv://{username}:{password}@{cluster}/{dbname}?retryWrites=true&w=majority"
+
     client = MongoClient(
-    os.getenv("MONGO_URI"),
-    tls=True,
-    tlsAllowInvalidCertificates=True  # Only use this for testing/Streamlit Cloud
+        mongo_uri,
+        tls=True,
+        tlsAllowInvalidCertificates=True  # Only use this for testing/Streamlit Cloud
     )
 
-    db = client[os.getenv("MONGO_DBNAME")]
-    collection = db[os.getenv("MONGO_COLLECTION")]
+    db = client[dbname]
+    collection = db[collection_name]
 except Exception as e:
     st.error("❌ MongoDB connection failed.")
+    st.code(str(e))
     st.stop()
 
 # Rule-based MongoDB filter generator (fallback method)
